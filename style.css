@@ -1,0 +1,172 @@
+:root {
+    /* Primray color */
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+
+    /* Neutral color */
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smoke-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("./assets/fonts/Poppins-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("./assets/fonts/Poppins-BoldItalic.ttf");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("./assets/fonts/Poppins-ExtraBold.ttf");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("./assets/fonts/Poppins-ExtraBoldItalic.ttf");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("./assets/fonts/Poppins-Italic.ttf");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("./assets/fonts/Poppins-Regular.ttf");
+    font-weight: 400;
+}
+
+input {
+    font-size: 32px;
+    width: 120px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: 1px solid var(--light-grey);
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--off-white);
+    font-family: "poppins";
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 45%;
+    padding: 50px;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.input-label {
+    letter-spacing: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--smoke-grey);
+    margin-bottom: 8px;
+}
+
+.input-label.error {
+    color: rgb(228, 73, 73);
+}
+
+.input.error {
+    outline: 1px solid rgb(228, 73, 73);
+}
+
+.input:focus {
+    outline: 1px solid var(--purple);
+}
+
+.error-message {
+    color: rgb(228, 73, 73);
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 8px;
+    display: none;
+}
+
+.button {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    align-items: center;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--light-grey);
+    position: absolute;
+    z-index: 0;
+}
+
+.submit-button {
+    background: url("./assets/images/icon-arrow.svg");
+    background-color: var(--purple);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 999px;
+    padding: 10px;
+    border: none;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+
+.result {
+    font-size: 36px;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--off-black);
+}
+
+.number {
+    color: var(--purple);
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    .button {
+        justify-content: center;
+    }
+
+    /* Aturan gaya lainnya untuk tampilan di layar kecil */
+}
